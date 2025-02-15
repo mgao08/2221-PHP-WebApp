@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Select Record</title>
+
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="js/bootstrap.bundle.min.js" defer></script>
+   <script src="js/select.js" defer></script>
+</head>
+
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg bg-dark p-3" data-bs-theme="dark">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="index.html">Facility Management</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav ms-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="index.html">Test Connection</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="insert.html">Insert Record</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link active" href="select.html">Select Query</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="update.html">Update Record</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="delete.html">Delete Record</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   
+   <div class="container">
+
+      <!-- Section Contents -->
+      <form form class="text-center" method="post" action="php/select.php">
+         <legend class="my-5">Select Record From Database</legend>
+         <div class="card border-secondary">
+
+            <div class="card-body p-5">
+               <div class="row">
+                  <div class="col-5 text-end"><label>Select By:</label></div>
+                  <div class="col-7 text-start">
+                     <select name="condition">
+                        <option value="all">All</option>
+                        <option value="pId">Person ID</option>
+                        <option value="name">Name</option>
+                        <option value="DoB">Birth Date</option>
+                        <option value="phone">Phone Number</option>
+                        <option value="email">Email</option>
+                     </select>
+                  </div>
+               </div> <!-- End row -->
+            
+
+         <!-- Input fields -->
+               <div class="row my-3 inputfield" id="pId-input">
+                  <div class="col-5 text-end"><label>Enter Person ID:</label></div>
+                  <div class="col-7 text-start"><input type="number" name="pId"></div>
+               </div>
+
+               <div class="row my-3 inputfield" id="name-input">
+                  <div class="col-5 text-end"><label>Enter Full Name:</label></div>
+                  <div class="col-7 text-start"><input type="text" name="FullName"></div>
+               </div>
+
+               <div class="row my-3 inputfield" id="DoB-input">
+                  <div class="col-5 text-end"><label>Enter Date Of Birth:</label></div>
+                  <div class="col-7 text-start"><input type="date" name="DoB"></div>
+               </div>
+
+               <div class="row my-3 inputfield" id="phone-input">
+                  <div class="col-5 text-end"><label>Enter Phone Number:</label></div>
+                  <div class="col-7 text-start"><input type="number" name="phone"></div>
+               </div>
+
+               <div class="row my-3 inputfield" id="email-input">
+                  <div class="col-5 text-end"><label>Enter Email:</label></div>
+                  <div class="col-7 text-start"><input type="email" name="mail"></div>
+               </div>
+
+            </div>   <!-- End card body -->
+
+            <div class="card-footer">
+               <button class="btn btn-primary my-3">Submit</button>
+            </div>
+            
+         </div>   <!-- End card -->
+
+      </form>
+   </div>
+</body>
+
+</html>

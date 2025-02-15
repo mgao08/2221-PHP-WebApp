@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Test Connection</title>
+
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="js/bootstrap.bundle.min.js" defer></script>
+</head>
+
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg bg-dark p-3" data-bs-theme="dark">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="index.html">Facility Management</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav ms-auto">
+               <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Test Connection</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="insert.html">Insert Record</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="select.html">Select Query</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="update.html">Update Record</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="delete.html">Delete Record</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <div class="container">
+   
+   <!-- Section Contents -->
+   <form class="text-center my-5" action="php/connect.php">
+      <legend>Click to test your database connection</legend>
+      <button class="btn btn-primary my-5">Am I Connected?</button>
+   </form>
+
+   <div class="card border-secondary">
+      <div class="card-body">
+         <div class="row">
+            <div class="col-6">
+               <form class="text-center my-5" action="php/createDB.php">
+                  <button class="btn btn-secondary">Create Facility Management Database</button>
+               </form>
+            </div>
+
+            <div class="col-6">
+               <form class="text-center my-5" action="php/createTable.php">
+                  <button class="btn btn-secondary">Create Person Information Table</button>
+               </form>
+            </div>
+         </div>   <!-- End row -->
+      </div>   <!-- End card body -->
+   </div>   <!-- End card -->
+
+   </div>
+</body>
+</html>

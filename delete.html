@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Delete Record</title>
+
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="js/bootstrap.bundle.min.js" defer></script>
+   <script src="js/update.js" defer></script>
+</head>
+
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg bg-dark p-3" data-bs-theme="dark">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="index.html">Facility Management</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav ms-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="index.html">Test Connection</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="insert.html">Insert Record</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="select.html">Select Query</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="update.html">Update Record</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link active" href="delete.html">Delete Record</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   
+   <div class="container">
+
+      <!-- Section Contents -->
+      <form class="text-center" method="post" action="php/delete.php">
+         <legend class="my-5">Delete Record By Person ID</legend>
+
+         <div class="card border-secondary">
+            <div class="card-body py-5">
+               <div class="row">
+                  <div class="col-5 text-end"><label>Enter Person ID:</label></div>
+                  <div class="col-7 text-start"><input type="number" name="pId"></div>
+               </div> <!-- End row -->
+            </div>
+
+            <div class="card-footer">
+               <button class="btn btn-danger my-3">Delete Record</button>
+            </div>
+         </div>   <!-- End Card -->
+
+      </form>
+   </div>
+</body>
+
+</html>
